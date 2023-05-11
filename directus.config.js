@@ -21,5 +21,14 @@ module.exports = function (env) {
         DB_DATABASE: env.PGDATABASE,
         DB_USER: env.PGUSER,
         DB_PASSWORD: env.PGPASSWORD,
+        
+        CORS_ENABLED: true,
+        CORS_ORIGIN: true,
+        CORS_ALLOWED_HEADERS: "Set-Cookie,Content-Type,Authorization",
+
+        REFRESH_TOKEN_COOKIE_DOMAIN:
+          process.env.REFRESH_TOKEN_COOKIE_DOMAIN || "up.railway.app",
+        REFRESH_TOKEN_COOKIE_SECURE: "true",
+        REFRESH_TOKEN_COOKIE_SAME_SITE: "None",
     };
 };
